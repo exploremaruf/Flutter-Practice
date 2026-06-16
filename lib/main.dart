@@ -31,8 +31,9 @@ class HomeActivity extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Adorenemous', style: TextStyle(fontSize: 20)),
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.pinkAccent,
         foregroundColor: Colors.white,
+        elevation: 6,
         actions: [
           IconButton(
             onPressed: () {
@@ -41,6 +42,16 @@ class HomeActivity extends StatelessWidget {
             icon: Icon(Icons.account_circle),
           ),
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        elevation: 10,
+        foregroundColor: Colors.white,
+
+        backgroundColor: Colors.pink,
+        child: Icon(Icons.voice_chat),
+        onPressed: () {
+          Mysnackbar('This is a floating action button', context);
+        },
       ),
     );
   }
