@@ -20,8 +20,28 @@ class MyApp extends StatelessWidget {
 }
 
 class HomeActivity extends StatelessWidget {
+  Mysnackbar(message, context) {
+    return ScaffoldMessenger.of(
+      context,
+    ).showSnackBar(SnackBar(content: Text(message)));
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Adorenemous', style: TextStyle(fontSize: 20)),
+        backgroundColor: Colors.green,
+        foregroundColor: Colors.white,
+        actions: [
+          IconButton(
+            onPressed: () {
+              Mysnackbar("alright this is working", context);
+            },
+            icon: Icon(Icons.account_circle),
+          ),
+        ],
+      ),
+    );
   }
 }
