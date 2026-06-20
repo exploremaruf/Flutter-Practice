@@ -29,6 +29,7 @@ class HomeActivity extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       appBar: AppBar(
         title: Text('Adorenemous', style: TextStyle(fontSize: 20)),
         backgroundColor: Colors.pinkAccent,
@@ -79,6 +80,19 @@ class HomeActivity extends StatelessWidget {
             label: 'Profile',
           ),
         ],
+      ),
+
+      drawer: Drawer(
+          backgroundColor: Colors.pinkAccent,
+        child: ListView(
+          padding: EdgeInsets.all(0),
+          children: [
+            DrawerHeader(child:Text("This is Header")),
+            ListTile(
+              title: Text("Home"),
+            )
+          ],
+        ),
       ),
     );
   }
