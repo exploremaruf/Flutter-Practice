@@ -43,6 +43,7 @@ class HomeActivity extends StatelessWidget {
           ),
         ],
       ),
+
       floatingActionButton: FloatingActionButton(
         elevation: 10,
         foregroundColor: Colors.white,
@@ -52,6 +53,32 @@ class HomeActivity extends StatelessWidget {
         onPressed: () {
           Mysnackbar('This is a floating action button', context);
         },
+      ),
+
+      bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed, //this is maybe mandatory
+        backgroundColor: Colors.pinkAccent,
+        currentIndex: 0,
+        selectedItemColor: Colors.white,
+        unselectedItemColor: Colors.grey,
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.search),
+            label: 'Search',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.wechat_outlined),
+            label: 'Messages',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'Profile',
+          ),
+        ],
       ),
     );
   }
