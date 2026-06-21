@@ -29,7 +29,6 @@ class HomeActivity extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       appBar: AppBar(
         title: Text('Adorenemous', style: TextStyle(fontSize: 20)),
         backgroundColor: Colors.pinkAccent,
@@ -80,6 +79,35 @@ class HomeActivity extends StatelessWidget {
           children: [
             DrawerHeader(child: Text("This is Header")),
             ListTile(title: Text("Home")),
+          ],
+        ),
+      ),
+
+      endDrawer: Drawer(
+        backgroundColor: Colors.pink.shade100,
+        child: ListView(
+          padding: EdgeInsets.all(0),
+          children: [
+            UserAccountsDrawerHeader(
+              decoration: BoxDecoration(color: Colors.pink),
+              accountName: Text("Maruf Hasan"),
+              accountEmail: Text("maruf@gmail.com"),
+              currentAccountPicture: Image.network(
+                "https://avatars.githubusercontent.com/u/144926110?v=4",
+              ),
+              currentAccountPictureSize: Size.square(72.0),
+            ),
+
+            ListTile(
+              title: Text("Home"),
+              leading:Icon(Icons.home),
+              onTap: (){
+
+              },
+              
+
+
+            ),
           ],
         ),
       ),
