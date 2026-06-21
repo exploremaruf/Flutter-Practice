@@ -48,7 +48,6 @@ class HomeActivity extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         elevation: 10,
         foregroundColor: Colors.white,
-
         backgroundColor: Colors.pink,
         child: Icon(Icons.voice_chat),
         onPressed: () {
@@ -57,40 +56,30 @@ class HomeActivity extends StatelessWidget {
       ),
 
       bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed, //this is maybe mandatory
+        type: BottomNavigationBarType.fixed,
+        //this is maybe mandatory
         backgroundColor: Colors.pinkAccent,
         currentIndex: 0,
         selectedItemColor: Colors.white,
         unselectedItemColor: Colors.grey,
         items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.search),
-            label: 'Search',
-          ),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Search'),
           BottomNavigationBarItem(
             icon: Icon(Icons.wechat_outlined),
             label: 'Messages',
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Profile',
-          ),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
         ],
       ),
 
       drawer: Drawer(
-          backgroundColor: Colors.pinkAccent,
+        backgroundColor: Colors.pinkAccent,
         child: ListView(
           padding: EdgeInsets.all(0),
           children: [
-            DrawerHeader(child:Text("This is Header")),
-            ListTile(
-              title: Text("Home"),
-            )
+            DrawerHeader(child: Text("This is Header")),
+            ListTile(title: Text("Home")),
           ],
         ),
       ),
