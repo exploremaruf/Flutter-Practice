@@ -77,8 +77,50 @@ class HomeActivity extends StatelessWidget {
         child: ListView(
           padding: EdgeInsets.all(0),
           children: [
-            DrawerHeader(child: Text("This is Header")),
-            ListTile(title: Text("Home")),
+            UserAccountsDrawerHeader(
+              decoration: BoxDecoration(
+                color: Colors.pink,
+                image: DecorationImage(
+                  image: NetworkImage(
+                    "https://avatars.githubusercontent.com/u/144926110?v=4",
+                  ),
+                  fit: BoxFit.cover,
+                ),
+              ),
+              accountName: Text(
+                "Maruf Hasan",
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+              accountEmail: Text(
+                "maruf@gmail.com",
+                style: TextStyle(
+                  fontSize: 16,
+                  color: Colors.white,
+                  fontStyle: FontStyle.italic,
+                ),
+              ),
+            ),
+
+            ListTile(
+              title: Text("Home", style: TextStyle(color: Colors.white)),
+              leading: Icon(Icons.home),
+              iconColor: Colors.white,
+              onTap: () {
+                Mysnackbar("Home", context);
+              },
+            ),
+            ListTile(
+              title: Text("Search", style: TextStyle(color: Colors.white)),
+              leading: Icon(Icons.search),
+              iconColor: Colors.white,
+              onTap: () {
+                Mysnackbar("Search", context);
+              },
+            ),
           ],
         ),
       ),
@@ -92,21 +134,44 @@ class HomeActivity extends StatelessWidget {
               decoration: BoxDecoration(color: Colors.pink),
               accountName: Text("Maruf Hasan"),
               accountEmail: Text("maruf@gmail.com"),
-              currentAccountPicture: Image.network(
-                "https://avatars.githubusercontent.com/u/144926110?v=4",
+              currentAccountPicture: CircleAvatar(
+                backgroundImage: NetworkImage(
+                  "https://avatars.githubusercontent.com/u/144926110?v=4",
+                ),
               ),
-              currentAccountPictureSize: Size.square(72.0),
             ),
 
             ListTile(
               title: Text("Home"),
-              leading:Icon(Icons.home),
-              onTap: (){
+              leading: Icon(Icons.home),
+              onTap: () {},
+            ),
+          ],
+        ),
+      ),
 
-              },
-              
-
-
+      //body
+      body: Container(
+        child: Column(
+          children: [
+            Image.network(
+              'https://wallpapercave.com/wp/wp8480114.jpg',
+              height: 200,
+              width: double.infinity,
+              fit: BoxFit.fitWidth,
+            ),
+            Text(
+              'Cristiano Ronaldo',
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                color: Colors.red,
+              ),
+            ),
+            Text(
+              'Cristiano Ronaldo dos Santos Aveiro (born February 5, 1985) is a Portuguese professional footballer who plays as a forward for Al-Nassr and captains the Portugal national team',
+              style: TextStyle(fontSize: 15, fontStyle: FontStyle.italic),
+              textAlign: TextAlign.justify,
             ),
           ],
         ),
