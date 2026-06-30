@@ -9,8 +9,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(primarySwatch: Colors.blue),
-      darkTheme: ThemeData(primarySwatch: Colors.indigo),
+      theme: ThemeData(primarySwatch: Colors.deepOrange),
+      darkTheme: ThemeData(primarySwatch: Colors.grey),
       debugShowCheckedModeBanner: false,
       color: Colors.green,
 
@@ -32,8 +32,8 @@ class HomeActivity extends StatelessWidget {
 
       appBar: AppBar(
         title: Text('Adorenemous', style: TextStyle(fontSize: 20)),
-        backgroundColor: Colors.pinkAccent,
-        foregroundColor: Colors.white,
+        backgroundColor: Colors.orange.shade50,
+        foregroundColor: Colors.black,
         elevation: 6,
         actions: [
           IconButton(
@@ -49,7 +49,7 @@ class HomeActivity extends StatelessWidget {
         elevation: 10,
         foregroundColor: Colors.white,
 
-        backgroundColor: Colors.pink,
+        backgroundColor: Colors.deepOrange,
         child: Icon(Icons.voice_chat),
         onPressed: () {
           Mysnackbar('This is a floating action button', context);
@@ -58,10 +58,10 @@ class HomeActivity extends StatelessWidget {
 
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed, //this is maybe mandatory
-        backgroundColor: Colors.pinkAccent,
+        backgroundColor: Colors.orange.shade50,
         currentIndex: 0,
-        selectedItemColor: Colors.white,
-        unselectedItemColor: Colors.grey,
+        selectedItemColor: Colors.black,
+        unselectedItemColor: Colors.black54,
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
@@ -83,7 +83,7 @@ class HomeActivity extends StatelessWidget {
       ),
 
       drawer: Drawer(
-          backgroundColor: Colors.pinkAccent,
+          backgroundColor: Colors.orange.shade50,
         child: ListView(
           padding: EdgeInsets.all(0),
           children: [
@@ -94,6 +94,13 @@ class HomeActivity extends StatelessWidget {
           ],
         ),
       ),
+      
+      body: 
+      Center(
+        child:Image.network('https://imgs.search.brave.com/sBVLyF-ntK119J-ne1qtQL-rnP-7XivJ_-Gi00foBLM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTk1/MDgxOTMzMy9waG90/by9uYXR1cmUtaGVh/cnQuanBnP3M9NjEy/eDYxMiZ3PTAmaz0y/MCZjPVl6MDZDT2dn/ejEwWUhnRU5yeDUz/Z01LdzJUVE45aVY4/Y2hScE8xZFlHUHM9'),
+      )
+      ,
+      
     );
   }
 }
