@@ -29,9 +29,9 @@ class HomeActivity extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: Text('Adorenemous', style: TextStyle(fontSize: 20)),
-      //   backgroundColor: Colors.orange.shade50,
+// appBar: AppBar(
+//   title: Text('Adorenemous', style: TextStyle(fontSize: 20)),
+//   backgroundColor: Colors.orange.shade50,
       //   foregroundColor: Colors.black,
       //   elevation: 6,
       //   actions: [
@@ -93,11 +93,11 @@ class HomeActivity extends StatelessWidget {
       //     ],
       //   ),
       // ),
-      body:Container(
-        height: 100,
-        width: 100,
-        color: Colors.yellow,
-      )
+body:Container(
+  height: 100,
+  width: 100,
+  color: Colors.yellow,
+)
     );
   }
 }
