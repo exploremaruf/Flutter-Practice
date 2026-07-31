@@ -38,7 +38,13 @@ class HomeActivity extends StatelessWidget {
           IconButton(
             onPressed: () {
               // Mysnackbar("alright this is working", context);
-              showAboutDialog(context: context);
+              // showAboutDialog(context: context);
+              showDialog(context: context, builder: (context){
+                return AlertDialog(
+                  title: Text('Are you Sure?'),
+                  content: Text('Are you sure you want to send money?'),
+                );
+              });
             },
             icon: Icon(Icons.account_circle),
           ),
