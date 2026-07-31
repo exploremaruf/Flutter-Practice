@@ -23,26 +23,27 @@ class HomeActivity extends StatelessWidget {
   Mysnackbar(message, context) {
     return ScaffoldMessenger.of(
       context,
-    ).showSnackBar(SnackBar(content: Text(message)));
+    ).showSnackBar(SnackBar(content: Text(message),backgroundColor:Colors.green,));
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-// appBar: AppBar(
-//   title: Text('Adorenemous', style: TextStyle(fontSize: 20)),
-//   backgroundColor: Colors.orange.shade50,
-      //   foregroundColor: Colors.black,
-      //   elevation: 6,
-      //   actions: [
-      //     IconButton(
-      //       onPressed: () {
-      //         Mysnackbar("alright this is working", context);
-      //       },
-      //       icon: Icon(Icons.account_circle),
-      //     ),
-      //   ],
-      // ),
+      appBar: AppBar(
+        title: Text('Adorenemous', style: TextStyle(fontSize: 20)),
+        backgroundColor: Colors.orange.shade50,
+        foregroundColor: Colors.black,
+        elevation: 6,
+        actions: [
+          IconButton(
+            onPressed: () {
+              // Mysnackbar("alright this is working", context);
+              showAboutDialog(context: context);
+            },
+            icon: Icon(Icons.account_circle),
+          ),
+        ],
+      ),
       //
       // floatingActionButton: FloatingActionButton(
       //   elevation: 10,
@@ -93,11 +94,11 @@ class HomeActivity extends StatelessWidget {
       //     ],
       //   ),
       // ),
-body:Container(
-  height: 100,
-  width: 100,
-  color: Colors.yellow,
-)
+      body:Container(
+        height: 100,
+        width: 100,
+        color: Colors.yellow,
+      )
     );
   }
 }
