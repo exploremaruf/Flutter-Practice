@@ -23,7 +23,7 @@ class HomeActivity extends StatelessWidget {
   Mysnackbar(message, context) {
     return ScaffoldMessenger.of(
       context,
-    ).showSnackBar(SnackBar(content: Text(message)));
+    ).showSnackBar(SnackBar(content: Text(message),backgroundColor: Colors.green,));
   }
 
   @override
@@ -37,7 +37,8 @@ class HomeActivity extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {
-              Mysnackbar("alright this is working", context);
+              // Mysnackbar("All right this is working!", context);
+              // showAboutDialog(context: context);
             },
             icon: Icon(Icons.account_circle),
           ),
