@@ -21,9 +21,9 @@ class MyApp extends StatelessWidget {
 
 class HomeActivity extends StatelessWidget {
   Mysnackbar(message, context) {
-    return ScaffoldMessenger.of(
-      context,
-    ).showSnackBar(SnackBar(content: Text(message),backgroundColor: Colors.green,));
+    return ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text(message), backgroundColor: Colors.green),
+    );
   }
 
   @override
@@ -39,6 +39,30 @@ class HomeActivity extends StatelessWidget {
             onPressed: () {
               // Mysnackbar("All right this is working!", context);
               // showAboutDialog(context: context);
+              showDialog(
+                context: context,
+                builder: (context) {
+                  return AlertDialog(
+                    title: Text("Hello!"),
+                    content: Text("How are you??"),
+                    actions: [
+                      TextButton(
+                        onPressed: () {
+                          print("Pressed Okay");
+                        },
+                        child: Text("Okay"),
+                      ),
+                      TextButton(
+                        onPressed: () {
+                          print("pressed Not okay");
+                          Navigator.pop(context);
+                        },
+                        child: Text("Not Okay"),
+                      ),
+                    ],
+                  );
+                },
+              );
             },
             icon: Icon(Icons.account_circle),
           ),
