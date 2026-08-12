@@ -176,30 +176,48 @@ class HomeActivity extends StatelessWidget {
       ),
 
       //body
-      body: Container(
-        child: Column(
-          children: [
-            Image.network(
-              'https://wallpapercave.com/wp/wp8480114.jpg',
-              height: 200,
-              width: double.infinity,
-              fit: BoxFit.fitWidth,
-            ),
-            Text(
-              'Cristiano Ronaldo',
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-                color: Colors.red,
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          Padding(
+            padding: EdgeInsets.all(20),
+            child: TextField(
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                labelText: 'FirstName',
               ),
             ),
-            Text(
-              'Cristiano Ronaldo dos Santos Aveiro (born February 5, 1985) is a Portuguese professional footballer who plays as a forward for Al-Nassr and captains the Portugal national team',
-              style: TextStyle(fontSize: 15, fontStyle: FontStyle.italic),
-              textAlign: TextAlign.justify,
+          ),
+          Padding(
+            padding: EdgeInsets.all(20),
+            child: TextField(
+              decoration: InputDecoration(
+                labelText: 'Email',
+                border: OutlineInputBorder(),
+              ),
             ),
-          ],
-        ),
+          ),
+          Padding(
+            padding: EdgeInsets.all(20),
+            child: TextField(
+              decoration: InputDecoration(
+                labelText: 'username',
+                border: OutlineInputBorder(),
+              ),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.all(20),
+            child: ElevatedButton(
+              onPressed: () {},
+              child: Text('Submit'),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.pink,
+                foregroundColor: Colors.white,
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
