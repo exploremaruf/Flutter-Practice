@@ -182,30 +182,64 @@ class HomeActivity extends StatelessWidget {
           Padding(
             padding: EdgeInsets.all(20),
             child: TextField(
-              decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                labelText: 'FirstName',
+              style: TextStyle(
+                fontSize: 20,
+                color: Colors.blueAccent
               ),
+              decoration: InputDecoration(
+               hintText: 'Enter your Name',
+                hintStyle:TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w300
+                ),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10),
+                  borderSide: BorderSide(width: 3,color: Colors.purple.shade100),
+
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderSide: BorderSide(width: 3,color: Colors.purple),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                labelText: 'Name',
+                prefixIcon: Icon(Icons.man_2_outlined),
+                suffixIcon: Icon(Icons.woman)
+              ),
+
             ),
           ),
           Padding(
             padding: EdgeInsets.all(20),
             child: TextField(
+              maxLength: 10,
+
               decoration: InputDecoration(
                 labelText: 'Email',
-                border: OutlineInputBorder(),
+                enabledBorder:
+                  OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(50)
+                  ),
+                fillColor: Colors.red,
+                filled: true,
+                prefixIcon:Icon(Icons.mail)
               ),
             ),
           ),
+
           Padding(
             padding: EdgeInsets.all(20),
             child: TextField(
+              enabled: false,
               decoration: InputDecoration(
                 labelText: 'username',
-                border: OutlineInputBorder(),
+                disabledBorder:
+                  OutlineInputBorder(
+                    borderSide: BorderSide(width: 3,color: Colors.grey)
+                  )
               ),
             ),
           ),
+
           Padding(
             padding: EdgeInsets.all(20),
             child: ElevatedButton(
