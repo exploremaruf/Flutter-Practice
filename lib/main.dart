@@ -322,6 +322,20 @@ class HomeActivity extends StatelessWidget {
       //       );
       //     }
       // ),
+      // body: GridView.builder(
+      //   padding: EdgeInsets.all(10),
+      //   itemCount: 20,
+      //   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+      //     crossAxisCount: 2,
+      //     crossAxisSpacing: 10,
+      //     mainAxisSpacing: 10,
+      //   ),
+      //   itemBuilder: (context, index) {
+      //     return Image.network(
+      //       'https://imageio.forbes.com/specials-images/imageserve/645ea1c4fce09061884bd21c/0x0.jpg?format=jpg&crop=2774,2772,x925,y0,safe&height=416&width=416&fit=bounds',
+      //     );
+      //   },
+      // ),
     );
   }
 }
