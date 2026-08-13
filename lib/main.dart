@@ -26,67 +26,67 @@ class HomeActivity extends StatelessWidget {
     );
   }
 
-  var Myimages = [
-    {
-      'img':
-          'https://imgs.search.brave.com/XEG-_pI37YpdU0NlARKDsL9eA78-yhvHIifXGhZWBCw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMjI4/NDQwNTI0OS9waG90/by90b3JvbnRvLW9u/dGFyaW8tY3Jpc3Rp/YW5vLXJvbmFsZG8t/b2YtcG9ydHVnYWwt/Y2VsZWJyYXRlcy1h/ZnRlci1zY29yaW5n/LWhpcy10ZWFtcy1m/aXJzdC1nb2FsLmpw/Zz9zPTYxMng2MTIm/dz0wJms9MjAmYz1Y/eGlzRGNsaTBFV21B/Xy1XUmlxVUo5UHEw/UzBndU5oM1hrRVlh/U3ljMjJFPQ',
-    },
-    {
-      'img':
-          'https://imgs.search.brave.com/XEG-_pI37YpdU0NlARKDsL9eA78-yhvHIifXGhZWBCw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMjI4/NDQwNTI0OS9waG90/by90b3JvbnRvLW9u/dGFyaW8tY3Jpc3Rp/YW5vLXJvbmFsZG8t/b2YtcG9ydHVnYWwt/Y2VsZWJyYXRlcy1h/ZnRlci1zY29yaW5n/LWhpcy10ZWFtcy1m/aXJzdC1nb2FsLmpw/Zz9zPTYxMng2MTIm/dz0wJms9MjAmYz1Y/eGlzRGNsaTBFV21B/Xy1XUmlxVUo5UHEw/UzBndU5oM1hrRVlh/U3ljMjJFPQ',
-    },
-    {
-      'img':
-          'https://imgs.search.brave.com/XEG-_pI37YpdU0NlARKDsL9eA78-yhvHIifXGhZWBCw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMjI4/NDQwNTI0OS9waG90/by90b3JvbnRvLW9u/dGFyaW8tY3Jpc3Rp/YW5vLXJvbmFsZG8t/b2YtcG9ydHVnYWwt/Y2VsZWJyYXRlcy1h/ZnRlci1zY29yaW5n/LWhpcy10ZWFtcy1m/aXJzdC1nb2FsLmpw/Zz9zPTYxMng2MTIm/dz0wJms9MjAmYz1Y/eGlzRGNsaTBFV21B/Xy1XUmlxVUo5UHEw/UzBndU5oM1hrRVlh/U3ljMjJFPQ',
-    },
-    {
-      'img':
-          'https://imgs.search.brave.com/XEG-_pI37YpdU0NlARKDsL9eA78-yhvHIifXGhZWBCw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMjI4/NDQwNTI0OS9waG90/by90b3JvbnRvLW9u/dGFyaW8tY3Jpc3Rp/YW5vLXJvbmFsZG8t/b2YtcG9ydHVnYWwt/Y2VsZWJyYXRlcy1h/ZnRlci1zY29yaW5n/LWhpcy10ZWFtcy1m/aXJzdC1nb2FsLmpw/Zz9zPTYxMng2MTIm/dz0wJms9MjAmYz1Y/eGlzRGNsaTBFV21B/Xy1XUmlxVUo5UHEw/UzBndU5oM1hrRVlh/U3ljMjJFPQ',
-    },
-  ];
+  // var Myimages = [
+  //   {
+  //     'img':
+  //         'https://imgs.search.brave.com/XEG-_pI37YpdU0NlARKDsL9eA78-yhvHIifXGhZWBCw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMjI4/NDQwNTI0OS9waG90/by90b3JvbnRvLW9u/dGFyaW8tY3Jpc3Rp/YW5vLXJvbmFsZG8t/b2YtcG9ydHVnYWwt/Y2VsZWJyYXRlcy1h/ZnRlci1zY29yaW5n/LWhpcy10ZWFtcy1m/aXJzdC1nb2FsLmpw/Zz9zPTYxMng2MTIm/dz0wJms9MjAmYz1Y/eGlzRGNsaTBFV21B/Xy1XUmlxVUo5UHEw/UzBndU5oM1hrRVlh/U3ljMjJFPQ',
+  //   },
+  //   {
+  //     'img':
+  //         'https://imgs.search.brave.com/XEG-_pI37YpdU0NlARKDsL9eA78-yhvHIifXGhZWBCw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMjI4/NDQwNTI0OS9waG90/by90b3JvbnRvLW9u/dGFyaW8tY3Jpc3Rp/YW5vLXJvbmFsZG8t/b2YtcG9ydHVnYWwt/Y2VsZWJyYXRlcy1h/ZnRlci1zY29yaW5n/LWhpcy10ZWFtcy1m/aXJzdC1nb2FsLmpw/Zz9zPTYxMng2MTIm/dz0wJms9MjAmYz1Y/eGlzRGNsaTBFV21B/Xy1XUmlxVUo5UHEw/UzBndU5oM1hrRVlh/U3ljMjJFPQ',
+  //   },
+  //   {
+  //     'img':
+  //         'https://imgs.search.brave.com/XEG-_pI37YpdU0NlARKDsL9eA78-yhvHIifXGhZWBCw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMjI4/NDQwNTI0OS9waG90/by90b3JvbnRvLW9u/dGFyaW8tY3Jpc3Rp/YW5vLXJvbmFsZG8t/b2YtcG9ydHVnYWwt/Y2VsZWJyYXRlcy1h/ZnRlci1zY29yaW5n/LWhpcy10ZWFtcy1m/aXJzdC1nb2FsLmpw/Zz9zPTYxMng2MTIm/dz0wJms9MjAmYz1Y/eGlzRGNsaTBFV21B/Xy1XUmlxVUo5UHEw/UzBndU5oM1hrRVlh/U3ljMjJFPQ',
+  //   },
+  //   {
+  //     'img':
+  //         'https://imgs.search.brave.com/XEG-_pI37YpdU0NlARKDsL9eA78-yhvHIifXGhZWBCw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMjI4/NDQwNTI0OS9waG90/by90b3JvbnRvLW9u/dGFyaW8tY3Jpc3Rp/YW5vLXJvbmFsZG8t/b2YtcG9ydHVnYWwt/Y2VsZWJyYXRlcy1h/ZnRlci1zY29yaW5n/LWhpcy10ZWFtcy1m/aXJzdC1nb2FsLmpw/Zz9zPTYxMng2MTIm/dz0wJms9MjAmYz1Y/eGlzRGNsaTBFV21B/Xy1XUmlxVUo5UHEw/UzBndU5oM1hrRVlh/U3ljMjJFPQ',
+  //   },
+  // ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Adorenemous', style: TextStyle(fontSize: 20)),
-        backgroundColor: Colors.pinkAccent,
-        foregroundColor: Colors.white,
-        elevation: 6,
-        actions: [
-          IconButton(
-            onPressed: () {
-              // Mysnackbar("All right this is working!", context);
-              // showAboutDialog(context: context);
-              showDialog(
-                context: context,
-                builder: (context) {
-                  return AlertDialog(
-                    title: Text("Hello!"),
-                    content: Text("How are you??"),
-                    actions: [
-                      TextButton(
-                        onPressed: () {
-                          print("Pressed Okay");
-                        },
-                        child: Text("Okay"),
-                      ),
-                      TextButton(
-                        onPressed: () {
-                          print("pressed Not okay");
-                          Navigator.pop(context);
-                        },
-                        child: Text("Not Okay"),
-                      ),
-                    ],
-                  );
-                },
-              );
-            },
-            icon: Icon(Icons.account_circle),
-          ),
-        ],
-      ),
+      // appBar: AppBar(
+      //   title: Text('Adorenemous', style: TextStyle(fontSize: 20)),
+      //   backgroundColor: Colors.pinkAccent,
+      //   foregroundColor: Colors.white,
+      //   elevation: 6,
+      //   actions: [
+      //     IconButton(
+      //       onPressed: () {
+      //         // Mysnackbar("All right this is working!", context);
+      //         // showAboutDialog(context: context);
+      //         showDialog(
+      //           context: context,
+      //           builder: (context) {
+      //             return AlertDialog(
+      //               title: Text("Hello!"),
+      //               content: Text("How are you??"),
+      //               actions: [
+      //                 TextButton(
+      //                   onPressed: () {
+      //                     print("Pressed Okay");
+      //                   },
+      //                   child: Text("Okay"),
+      //                 ),
+      //                 TextButton(
+      //                   onPressed: () {
+      //                     print("pressed Not okay");
+      //                     Navigator.pop(context);
+      //                   },
+      //                   child: Text("Not Okay"),
+      //                 ),
+      //               ],
+      //             );
+      //           },
+      //         );
+      //       },
+      //       icon: Icon(Icons.account_circle),
+      //     ),
+      //   ],
+      // ),
 
       // floatingActionButton: FloatingActionButton(
       //   elevation: 10,
@@ -336,6 +336,115 @@ class HomeActivity extends StatelessWidget {
       //     );
       //   },
       // ),
+      backgroundColor: Colors.red.shade100,
+      appBar: AppBar(
+        title: Text('Home'),
+        backgroundColor: Colors.red,
+        foregroundColor: Colors.white,
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return Profile();
+                    },
+                  ),
+                );
+              },
+              child: Text('Go to Profile'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Settings()),
+                );
+              },
+              child: Text('Go to Settings'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class Profile extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return Scaffold(
+      backgroundColor: Colors.blueAccent.shade100,
+      appBar: AppBar(
+        title: Text('Profile'),
+        backgroundColor: Colors.blueAccent,
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: Text('Go to Homepage'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => Settings()),
+                );
+              },
+              child: Text('Go to Settings'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class Settings extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return Scaffold(
+      backgroundColor: Colors.green.shade100,
+      appBar: AppBar(title: Text('Settings'), backgroundColor: Colors.green),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushAndRemoveUntil(
+                  context,
+                  MaterialPageRoute(builder: (context) => HomeActivity()),
+                  (Route) => false,
+                );
+              },
+              child: Text('Go to Home'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushAndRemoveUntil(
+                  context,
+                  MaterialPageRoute(builder: (context) => Profile()),
+                  (Route) => false,
+                );
+              },
+              child: Text('Go To profile page'),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
