@@ -1,24 +1,45 @@
-import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:test_project/home.dart';
+import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(iosStyle());
 }
 
-class MyApp extends StatelessWidget {
+class iosStyle extends StatelessWidget {
+  const iosStyle({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(primarySwatch: Colors.blue),
-      darkTheme: ThemeData(primarySwatch: Colors.indigo),
-      debugShowCheckedModeBanner: false,
-      color: Colors.green,
-
-      home: HomeActivity(),
-    );
+    return CupertinoApp(home: HomePage());
   }
 }
 
+class HomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return CupertinoPageScaffold(
+      navigationBar: CupertinoNavigationBar(
+        middle: Text('Luna'),
+        trailing: Icon(CupertinoIcons.fullscreen_exit),
+        leading: Icon(CupertinoIcons.back),
 
+      ),
 
+      child: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            CupertinoButton.filled(child: Text('Hello'), onPressed: () {}),
+            CupertinoActivityIndicator(
+              radius: 24,
+            ),
+            CupertinoSwitch(value:false , onChanged:(value) {
+
+            },)
+          ],
+        ),
+      ),
+    );
+  }
+}
