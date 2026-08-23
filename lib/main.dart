@@ -1,9 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+import 'package:device_preview/device_preview.dart';
 
 void main() {
-  runApp(iosStyle());
+  runApp(DevicePreview(enabled: true, builder: (context) => const iosStyle()));
 }
 
 class iosStyle extends StatelessWidget {
@@ -11,9 +12,7 @@ class iosStyle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: HomePage());
+    return MaterialApp(debugShowCheckedModeBanner: false, home: HomePage());
   }
 }
 
@@ -32,24 +31,14 @@ class HomePage extends StatelessWidget {
         children: [
           Flexible(
             fit: FlexFit.tight,
-            child: Container(
-              width: 100,
-              height: 100,
-              color: Colors.red,
-            ),
+            child: Container(width: 100, height: 100, color: Colors.red),
           ),
           Flexible(
             fit: FlexFit.loose,
-            child: Container(
-              width: 100,
-              height: 100,
-              color: Colors.blue,
-            ),
-          )
-
+            child: Container(width: 100, height: 100, color: Colors.blue),
+          ),
         ],
       ),
-
     );
   }
 }
